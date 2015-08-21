@@ -35,7 +35,7 @@ namespace Voice_Recognition
         private void Form1_Load(object sender, EventArgs e)
         {
             Choices commands = new Choices();
-            commands.Add(new string[] { "recibidos", "enviados", "redactar" });
+            commands.Add(new string[] { "recibidos", "enviados", "redactar", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "contactos", "eliminar", "enviar" });
             GrammarBuilder gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
             Grammar grammar = new Grammar(gBuilder);
@@ -50,13 +50,49 @@ namespace Voice_Recognition
             switch (e.Result.Text)
             {
                 case "recibidos":
-                    MessageBox.Show("INBOX - RECIBIDOS");
+                    txtTexto.Text = txtTexto.Text + "RECIBIDOS ";
                     break;
                 case "enviados":
-                    MessageBox.Show("SENT - ENVIADOS");
+                    txtTexto.Text = txtTexto.Text + "ENVIADOS ";
                     break;
                 case "redactar":
-                    MessageBox.Show("NEW MESSAGE - REDACTAR");
+                    txtTexto.Text = txtTexto.Text + "REDACTAR ";
+                    break;
+                case "uno":
+                    txtTexto.Text = txtTexto.Text + "1 ";
+                    break;
+                case "dos":
+                    txtTexto.Text = txtTexto.Text + "2 ";
+                    break;
+                case "tres":
+                    txtTexto.Text = txtTexto.Text + "3 ";
+                    break;
+                case "cuatro":
+                    txtTexto.Text = txtTexto.Text + "4 ";
+                    break;
+                case "cinco":
+                    txtTexto.Text = txtTexto.Text + "5 ";
+                    break;
+                case "seis":
+                    txtTexto.Text = txtTexto.Text + "6 ";
+                    break;
+                case "siete":
+                    txtTexto.Text = txtTexto.Text + "7 ";
+                    break;
+                case "ocho":
+                    txtTexto.Text = txtTexto.Text + "8 ";
+                    break;
+                case "nueve":
+                    txtTexto.Text = txtTexto.Text + "9 ";
+                    break;
+                case "contactos":
+                    txtTexto.Text = txtTexto.Text + "CONTACTOS ";
+                    break;
+                case "eliminar":
+                    txtTexto.Text = txtTexto.Text + "ELIMINAR ";
+                    break;
+                case "enviar":
+                    txtTexto.Text = txtTexto.Text + "ENVIAR ";
                     break;
             }
         }
